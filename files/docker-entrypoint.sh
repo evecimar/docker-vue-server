@@ -6,11 +6,14 @@ nginx=$nginx_conf_url
 command=$custom_command_url
 project_dir="/var/www/app"
 
+shopt -s dotglob nullglob
+
 cd /var/www/app/
+
 if [ ! -z $git ]
 then
     cd /var/www/app/
-    
+
     if [ -z $git_branch ]
         then
         git_branch=master
@@ -53,4 +56,4 @@ then
     /start.sh
 fi
 
-nginx
+/usr/sbin/nginx -g "daemon off;"
