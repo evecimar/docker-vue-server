@@ -1,7 +1,7 @@
 FROM node:10
 
-RUN apt-get update -Y && \
-    apt-get install nginx -Y
+RUN apt-get update -y && \
+    apt-get install nginx -y
 
 RUN mkdir /var/www/ && mkdir /var/www/app
 
