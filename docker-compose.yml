@@ -1,0 +1,12 @@
+version: '3.1'
+
+services:
+  docker-vue-server:
+    build:
+      context: .
+    image: evecimar/docker-vue-server
+    environment:
+      git_url:
+      git_branch:
+
+      
