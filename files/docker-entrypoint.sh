@@ -10,7 +10,7 @@ cd /var/www/app/
 if [ ! -z $git ]
 then
     cd /var/www/app/
-    rm -R *
+    
     if [ -z $git_branch ]
         then
         git_branch=master
